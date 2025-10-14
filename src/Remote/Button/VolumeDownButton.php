@@ -5,7 +5,7 @@ namespace App\Remote\Button;
 
 use Symfony\Component\DependencyInjection\Attribute\AsTaggedItem;
 
-#[AsTaggedItem('volume-down')]
+#[AsTaggedItem('volume-down', priority: 10)]
 final class VolumeDownButton implements ButtonInterface
 {
     public function press(): void
