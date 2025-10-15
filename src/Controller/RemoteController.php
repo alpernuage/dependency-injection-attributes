@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Remote\ButtonRemote;
+use App\Remote\RemoteInterface;
 use Psr\Container\NotFoundExceptionInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -15,7 +15,7 @@ final class RemoteController extends AbstractController
     #[Route('/', name: 'home', methods: ['GET', 'POST'])]
     public function index(
         Request $request,
-        ButtonRemote $remote
+        RemoteInterface $remote
     ): Response {
         if ('POST' === $request->getMethod()) {
             $button = $request->request->getString('button');
