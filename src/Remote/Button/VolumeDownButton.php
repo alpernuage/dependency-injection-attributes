@@ -2,7 +2,6 @@
 
 namespace App\Remote\Button;
 
-
 use Symfony\Component\DependencyInjection\Attribute\AsTaggedItem;
 
 #[AsTaggedItem('volume-down', priority: 10)]
